@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLO Carteles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <style>
+        #container {
+            position: relative;
+            display: inline-block; /* To make container wrap around the image and canvas */
+        }
+        #uploaded-image {
+            display: block; /* Remove extra space below image */
+        }
+        #detection-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #stado-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }    
+        #resultText {
+			 font-weight: bold;
+		}    
+    </style>
+</head>
+<body>
+    <h1>Prueba Modelo YOLO con TensorFlow.js</h1>
+
+	 <div class="form-group">
+                <br>  Configuración Nombres de Clases:  <input type="string" class="form-control" id="classesNames" value="2,0,8,6,4,3,1,7,9,5"/>
+                <br> 
+    </div>
+	<br>
+    <input type="file" id="imageUpload" accept="image/*">
+
+    <div id="container">
+        <img id="uploaded-image" src="#" alt="Imagen a Procesar">
+        <canvas id="detection-canvas"></canvas>
+    </div>
+    <div id="container2">
+    <span 	id="resultText"></span>
+    <br>
+    <span id="logText"></span>
+	</div>
+	
+    <script src="script.js"></script>
+</body>
+</html>
